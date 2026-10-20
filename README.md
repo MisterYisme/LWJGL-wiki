@@ -1,2 +1,2 @@
-# LWJGL-wiki
-Lightweight Java Game Library a new Wiki
+# The Unofficial LWJGL Wiki!
+Please make an issue if you find a missing function!
