@@ -1,0 +1,175 @@
+name: Missing Function | New Method
+description: Report a missing LWJGL function or Java method in the wiki
+title: "[NEW_FUNCTION]: "
+labels: ["missing function"]
+projects: ["MisterYisme/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the LWJGL wiki!
+
+        Use this template to request documentation for a missing LWJGL function, Java method, or useful engine-related helper. Please check the existing wiki first to avoid duplicate reports.
+
+  - type: input
+    id: function_name
+    attributes:
+      label: Function or Method Name
+      description: The name of the missing function or method.
+      placeholder: "glfwCreateWindow"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which part of LWJGL or Java does this function belong to?
+      options:
+        - GLFW / Window Management
+        - OpenGL / Rendering
+        - OpenGL / Shaders
+        - OpenGL / Textures
+        - OpenGL / Buffers and Vertex Arrays
+        - OpenGL / Drawing
+        - OpenAL / Audio
+        - STB / Images and Fonts
+        - Memory Management
+        - Input Handling
+        - Utilities
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Function Description
+      description: What should this function do, and why is it useful?
+      placeholder: |
+        Describe the function's purpose and when it should be used.
+        Explain any important behavior or common use cases.
+    validations:
+      required: true
+
+  - type: textarea
+    id: java_signature
+    attributes:
+      label: Java Method Signature
+      description: Provide the expected Java method signature, if known.
+      placeholder: |
+        public static long glfwCreateWindow(
+            int width,
+            int height,
+            CharSequence title,
+            long monitor,
+            long share
+        )
+      render: java
+    validations:
+      required: false
+
+  - type: textarea
+    id: parameters
+    attributes:
+      label: Parameters
+      description: List the parameters, their types, and what each one represents.
+      placeholder: |
+        - width (int): Window width in pixels.
+        - height (int): Window height in pixels.
+        - title (CharSequence): Window title.
+        - monitor (long): Monitor handle, or 0 for a windowed window.
+        - share (long): Handle of a window whose OpenGL resources should be shared, or 0.
+    validations:
+      required: false
+
+  - type: textarea
+    id: return_value
+    attributes:
+      label: Return Value
+      description: What does the function return? Explain possible special values or failure cases.
+      placeholder: |
+        Returns a window handle on success.
+        Returns 0 if window creation fails.
+    validations:
+      required: false
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Java Usage Example
+      description: Provide a minimal, working Java example showing how the function is used.
+      placeholder: |
+        long window = glfwCreateWindow(
+            1280, 720, "My Window", 0L, 0L
+        );
+      render: java
+    validations:
+      required: false
+
+  - type: textarea
+    id: existing_docs
+    attributes:
+      label: Existing Documentation
+      description: Does this function or something similar already exist in the wiki?
+      placeholder: |
+        Wiki page:
+        https://example.com/wiki/page
+
+        Related functions:
+        - glfwInit
+        - glfwMakeContextCurrent
+
+        Explain what is missing or needs improvement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: official_reference
+    attributes:
+      label: Official Reference
+      description: Link to the official LWJGL Javadoc, OpenGL reference, GLFW documentation, or other authoritative source.
+      placeholder: |
+        LWJGL Javadoc:
+        https://javadoc.lwjgl.org/
+
+        Official API reference:
+        https://www.glfw.org/docs/latest/
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this documentation?
+      options:
+        - Low - Useful additional reference
+        - Normal - Commonly used function
+        - High - Important or frequently requested function
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Include related functions, screenshots, alternative implementations, or anything else that might help.
+      placeholder: Any additional information that could help with documenting this function.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: |
+        Confirm the following where applicable.
+        Describing the function is encouraged, but not required.
+      options:
+        - label: I checked the wiki for existing documentation.
+          required: true
+        - label: I described what the function does and why it is needed.
+          required: false
+        - label: I provided an official reference where possible.
+          required: false
