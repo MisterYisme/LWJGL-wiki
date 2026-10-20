@@ -33,7 +33,7 @@ jobs:
 
       - name: Copy documentation
         run: |
-          cp -r docs/. wiki/
+          cp -r wiki/. wiki-repo/
 
       - name: Push wiki changes
         run: |
