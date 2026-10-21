@@ -1,4 +1,5 @@
 # CC BY-NC-SA
+## Be aware that this Licence is for the WIKI, NOT for LWJGL!
 
 This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format for noncommercial purposes only if attribution is given to the creator. If you remix, adapt, or build upon the material, you must license the modified material under the same or a compatible license. CC BY-NC-SA includes the following elements:
 
